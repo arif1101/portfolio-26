@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { TESTIMONIALS_DATA } from "../data/portfolio-data";
+import { TESTIMONIALS_DATA } from "@/data/portfolio-data";
 
 export function TestimonialsSection() {
   return (
@@ -56,11 +57,12 @@ export function TestimonialsSection() {
               {/* Author Header */}
               <div className="flex items-center gap-3">
                 <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-full overflow-hidden border border-purple-400/30 flex-shrink-0 bg-purple-900">
-                  <img
+                  <Image
                     src={item.avatar}
                     alt={item.name}
+                    width={40}
+                    height={40}
                     className="w-full h-full object-cover"
-                    loading="lazy"
                   />
                 </div>
                 <div className="flex flex-col min-w-0">

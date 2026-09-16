@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { CAREER_EXPERIENCES, EDUCATION_QUALIFICATIONS, ExperienceItem } from "../data/portfolio-data";
+import { CAREER_EXPERIENCES, EDUCATION_QUALIFICATIONS, ExperienceItem } from "@/data/portfolio-data";
 
 function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }) {
   return (

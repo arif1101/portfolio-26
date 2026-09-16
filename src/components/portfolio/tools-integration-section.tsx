@@ -3,7 +3,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { INTEGRATION_TOOLS } from "../data/portfolio-data";
+import { INTEGRATION_TOOLS } from "@/data/portfolio-data";
 
 export function ToolsIntegrationSection() {
   return (

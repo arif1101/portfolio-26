@@ -1,13 +1,13 @@
 import React from "react";
-import { HeroSection } from "@/features/portfolio/components/hero-section";
-import { CareerJourneySection } from "@/features/portfolio/components/career-journey-section";
-import { MyWorkSection } from "@/features/portfolio/components/my-work-section";
-import { ExperienceEducationSection } from "@/features/portfolio/components/experience-education-section";
-import { ToolsIntegrationSection } from "@/features/portfolio/components/tools-integration-section";
-import { AboutMeSection } from "@/features/portfolio/components/about-me-section";
-import { TestimonialsSection } from "@/features/portfolio/components/testimonials-section";
-import { InnerCircleCtaSection } from "@/features/portfolio/components/inner-circle-cta-section";
-import { FooterSection } from "@/features/portfolio/components/footer-section";
+import { HeroSection } from "@/components/portfolio/hero-section";
+import { CareerJourneySection } from "@/components/portfolio/career-journey-section";
+import { MyWorkSection } from "@/components/portfolio/my-work-section";
+import { ExperienceEducationSection } from "@/components/portfolio/experience-education-section";
+import { ToolsIntegrationSection } from "@/components/portfolio/tools-integration-section";
+import { AboutMeSection } from "@/components/portfolio/about-me-section";
+import { TestimonialsSection } from "@/components/portfolio/testimonials-section";
+import { InnerCircleCtaSection } from "@/components/portfolio/inner-circle-cta-section";
+import { FooterSection } from "@/components/portfolio/footer-section";
 
 export default function HomePage() {
   return (
