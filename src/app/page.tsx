@@ -11,7 +11,7 @@ import { FooterSection } from "@/components/portfolio/footer-section";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-6 sm:gap-12 pb-16 bg-[#050101] overflow-x-hidden">
+    <div className="flex flex-col gap-[104px] bg-[#050101] overflow-x-hidden">
       {/* 1. Hero Section */}
       <HeroSection />
 

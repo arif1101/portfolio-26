@@ -7,20 +7,20 @@ import { MotionFadeIn } from "@/components/ui/motion-wrapper";
 
 export function CareerJourneySection() {
   return (
-    <section className="w-full flex justify-center py-6 sm:py-12 px-3 sm:px-4 bg-[#050101]">
-      <MotionFadeIn className="w-full max-w-[1392px] bg-[#080202] rounded-[28px] sm:rounded-[40px] border border-white/5 p-5 sm:p-12 md:p-14 flex flex-col gap-8 sm:gap-12">
+    <section className="w-full flex justify-center px-3 sm:px-4 bg-[#050101]">
+      <MotionFadeIn className="w-full max-w-[1392px] rounded-[28px] sm:rounded-[40px] flex flex-col gap-8 sm:gap-5">
         {/* Section Header */}
         <div className="text-center space-y-1.5 sm:space-y-2">
-          <p className="text-gray-400 text-xs sm:text-sm font-medium tracking-wide">
+          <p className="font-sans font-normal text-[18px] leading-[140%] tracking-[0.01em] text-center text-[#A8B6B8]">
             Learning Through Every Path
           </p>
-          <h2 className="text-2xl sm:text-5xl font-black uppercase tracking-tight text-white">
+          <h2 className="font-bebas font-normal text-3xl sm:text-[48px] leading-[130%] tracking-[0%] uppercase text-center text-[#F9FBFB] mt-3">
             MY 4+ YEARS CAREER JOURNEY
           </h2>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 py-4 sm:py-6 border-y border-white/10 gap-y-4 sm:gap-y-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 py-4 sm:py-6 gap-y-4 sm:gap-y-0">
           {CAREER_STATS.map((stat, index) => (
             <motion.div
               key={stat.id}
@@ -28,16 +28,23 @@ export function CareerJourneySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`flex flex-col items-center justify-center p-2 sm:p-4 ${
-                index !== CAREER_STATS.length - 1 ? "md:border-r md:border-white/10" : ""
-              } ${index % 2 === 0 ? "border-r border-white/10 md:border-r-0" : ""}`}
+              className="relative flex flex-col items-center justify-center p-2 sm:p-4"
             >
-              <span className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              <span className="font-bebas font-normal text-3xl sm:text-[48px] leading-[130%] tracking-[0%] text-center align-middle text-[#F9FBFB]">
                 {stat.value}
               </span>
-              <span className="text-xs sm:text-sm text-gray-400 font-medium mt-1 text-center">
+              <span className="font-sans font-normal text-base leading-[140%] tracking-[0%] text-center align-middle text-[#A8B6B8] mt-1">
                 {stat.label}
               </span>
+
+              {/* Figma Divider: 119px vertical line, #344346 */}
+              {index < CAREER_STATS.length - 1 && (
+                <div
+                  className={`absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[119px] bg-[#344346] ${
+                    index % 2 === 1 ? "hidden md:block" : "block"
+                  }`}
+                />
+              )}
             </motion.div>
           ))}
         </div>
