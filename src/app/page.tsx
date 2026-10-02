@@ -2,6 +2,7 @@ import React from "react";
 import { HeroSection } from "@/components/portfolio/hero-section";
 import { CareerJourneySection } from "@/components/portfolio/career-journey-section";
 import { MyWorkSection } from "@/components/portfolio/my-work-section";
+import { FeaturedProjectsSection } from "@/components/portfolio/featured-projects-section";
 import { ExperienceEducationSection } from "@/components/portfolio/experience-education-section";
 import { ToolsIntegrationSection } from "@/components/portfolio/tools-integration-section";
 import { AboutMeSection } from "@/components/portfolio/about-me-section";
@@ -20,6 +21,9 @@ export default function HomePage() {
 
       {/* 3. My Work Showcase */}
       <MyWorkSection />
+
+      {/* 3.1 Featured Projects Gallery */}
+      <FeaturedProjectsSection />
 
       {/* 4. Experience & Education Timeline */}
       <ExperienceEducationSection />

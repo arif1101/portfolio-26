@@ -39,15 +39,53 @@ export function MyWorkSection() {
         <div className="grid grid-rows-[auto_auto] gap-4">
           <motion.div
             variants={item}
-            className="relative isolate flex min-h-[300px] items-center justify-center overflow-hidden rounded-[28px] border border-white/[0.06]"
+            className="relative isolate flex min-h-[300px] sm:min-h-[340px] items-center justify-center overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#09020e]"
           >
-            <Image
-              src="/uiuxdesign.png"
-              alt="UX UI design showcase"
-              fill
-              sizes="(max-width: 1024px) 100vw, 820px"
-              className="object-cover"
+            {/* Top-Right Glow from Figma */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-[18px] right-[-30px] sm:right-0 h-[80px] w-[340px] sm:w-[491px] rounded-full"
+              style={{
+                background:
+                  "linear-gradient(255.21deg, #090201 4.68%, #AB84FF 28.55%, #854CFF 76.5%, #FFBD8D 98.97%)",
+                filter: "blur(100px)",
+              }}
             />
+
+            {/* Bottom-Left Glow */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-[18px] -left-[30px] sm:left-0 h-[80px] w-[340px] sm:w-[491px] rounded-full"
+              style={{
+                background:
+                  "linear-gradient(75.21deg, #090201 4.68%, #AB84FF 28.55%, #854CFF 76.5%, #FFBD8D 98.97%)",
+                filter: "blur(100px)",
+              }}
+            />
+            {/* Grid overlay background */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              <Image
+                src="/ui-ux-bg.png"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 820px"
+                className="object-cover scale-[1.58] opacity-[0.09] mix-blend-screen"
+                priority
+              />
+            </div>
+
+            {/* UX / UI Design Graphic */}
+            <div className="relative z-10 flex h-[310px] sm:h-[350px] w-full items-center justify-center p-0">
+              <Image
+                src="/uiuxdesign.png"
+                alt="UX UI design showcase"
+                width={427}
+                height={695}
+                sizes="(max-width: 640px) 300px, 420px"
+                className="h-full w-auto object-contain scale-[1.2] drop-shadow-[0_12px_32px_rgba(0,0,0,0.45)]"
+                priority
+              />
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -161,18 +199,32 @@ export function MyWorkSection() {
 
         <motion.div
           variants={item}
-          className="relative isolate flex min-h-[560px] flex-col overflow-hidden rounded-[28px] border border-white/[0.06] px-7 py-10 sm:px-10 lg:min-h-full"
+          className="relative isolate flex min-h-[560px] flex-col overflow-hidden rounded-[24px] border border-white/[0.06] px-7 py-10 sm:px-10 lg:min-h-full"
           style={{
             background:
-              "radial-gradient(75% 55% at 50% 12%, rgba(94,58,181,0.48) 0%, rgba(94,58,181,0.12) 52%, rgba(10,6,22,0) 78%), #0A0616",
+              "linear-gradient(0deg, #0D0420, #0D0420), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
           }}
         >
+          {/* Columns Ribbed Texture */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 flex overflow-hidden select-none">
+            {Array.from({ length: 16 }).map((_, index) => (
+              <div
+                key={index}
+                className="h-full w-[47.13px] shrink-0 border-r border-white/10 backdrop-blur-[100px]"
+                style={{
+                  background:
+                    "linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 103.91%)",
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Message Icon Glow from Figma */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.22]"
+            className="pointer-events-none absolute left-1/2 top-[70px] -translate-x-1/2 h-[181px] w-[340px] sm:w-[406px] rounded-full bg-[#854CFF]"
             style={{
-              backgroundImage:
-                "repeating-linear-gradient(90deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 58px)",
+              filter: "blur(120px)",
             }}
           />
 
